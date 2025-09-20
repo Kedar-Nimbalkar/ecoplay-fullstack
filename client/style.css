@@ -1,0 +1,468 @@
+/* Add to existing style.css */
+
+/* General Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem; /* Consistent spacing */
+}
+
+/* Header for authenticated users */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4caf50;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo i {
+  margin-right: 0.5rem;
+}
+
+.header .nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header .nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.header .nav-link:hover,
+.header .nav-link.active {
+  color: #4caf50;
+}
+
+.header .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4caf50;
+}
+
+.header .auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+/* Main Content Area */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Text Utilities */
+.text-center {
+  text-align: center;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Avatar */
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Points Badge */
+.points-badge {
+  background: linear-gradient(45deg, #4caf50, #2e8b57);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Submission Item */
+.submission-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.submission-item:last-child {
+  border-bottom: none;
+}
+
+.submission-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+/* Quiz Specific */
+.quiz-container .question {
+  margin-bottom: 1.5rem;
+}
+
+.quiz-container .options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.quiz-container .option {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-container .option:hover {
+  background-color: #f0fdf0;
+  border-color: #4caf50;
+}
+
+.quiz-container .option.selected {
+  background-color: #e8f5e8;
+  border-color: #2b7a2b;
+  box-shadow: 0 0 0 2px rgba(43, 122, 43, 0.2);
+}
+
+.quiz-container .option input[type="radio"] {
+  margin-right: 1rem;
+  accent-color: #4caf50;
+}
+
+/* Watering History */
+.watering-history {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  gap: 5px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.day-indicator {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #666;
+  background-color: #e0e0e0;
+}
+
+.day-completed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.day-today {
+  background-color: #ffc107;
+  color: #333;
+  border: 2px solid #e0a800;
+}
+
+.day-missed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Card Locked/Unlocked */
+.card-locked {
+  opacity: 0.7;
+  filter: grayscale(50%);
+}
+
+.card-unlocked {
+  border: 2px solid #4caf50;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Lessons View */
+.lesson-card {
+    text-align: center;
+}
+
+.lesson-thumbnail {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.markdown-content {
+    text-align: left;
+    line-height: 1.8;
+    color: #444;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+/* Admin Table */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-small {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    margin-right: 0.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .header .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header .auth-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .main-content {
+        padding: 1rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-card {
+        padding: 1rem;
+    }
+    .user-table, .user-table thead, .user-table tbody, .user-table th, .user-table td, .user-table tr {
+        display: block;
+    }
+    .user-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .user-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .user-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    .user-table td:before {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+    .user-table td:nth-of-type(1):before { content: "Name"; }
+    .user-table td:nth-of-type(2):before { content: "Username"; }
+    .user-table td:nth-of-type(3):before { content: "Email"; }
+    .user-table td:nth-of-type(4):before { content: "Points"; }
+    .user-table td:nth-of-type(5):before { content: "Role"; }
+    .user-table td:nth-of-type(6):before { content: "Actions"; }
+}
